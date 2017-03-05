@@ -24,11 +24,20 @@ $.ajax({
    		+ '<a class="btn btn-primary" href=' + response.courses.in_progress[i].url + ' target="_blank">See Course</a>'
    		+ '</h3>'
    		+'</div>');   		
-   		//console.log(response.courses.in_progress[i]);
+   	};
+   		//Badges earned
+   	for (var i = 0; i < response.badges.length; i++) {
+   	$('#badge').append(
+   		'<div class="course"> <h3>' + response.badges[i].name 
+   		+ '<img src=' + response.badges[i].badge + '>'
+   		//+ '<a class="btn btn-primary" href=' + response.badges.[i].url + ' target="_blank">See Course</a>'
+   		+ '</h3>'
+   		+'</div>');   		
+
    	};
 
-        console.log(response.courses);
-        console.log(response.user);
+        //console.log(response.courses);
+        //console.log(response);
     }
   });
 
