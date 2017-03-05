@@ -3,6 +3,12 @@ $.ajax({
     url: 'https://www.codeschool.com/users/ednas.json',
     dataType: 'jsonp',
     success: function(response) {
+    	//User information
+		$('#user').append('<h2>'+ response.user.username.charAt(0).toUpperCase() + response.user.username.slice(1) +'</h2>'
+			+ '<h4>Has earned: ' + response.user.total_score + ' points</h4>'
+			+ '<img src=' + response.user.avatar + '>'
+			);
+		//Information about badges earned
    for (var i = 0; i < response.courses.completed.length; i++) {
    	$('#badges').append('<div class="course"> <h3>' + response.courses.completed[i].title 
    		+ '<img src=' + response.courses.completed[i].badge + '>'
@@ -10,8 +16,11 @@ $.ajax({
    		+ '</h3>'
    		+'</div>');
    };
-        console.log(response.courses.completed);
+        console.log(response.courses);
         console.log(response.user);
     }
   });
-});
+
+  });
+
+//});
