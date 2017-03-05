@@ -16,6 +16,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3, h4 {
+  margin: 10px 0 15px;
+}
+
+/******************/
+/* Header section */
+/******************/
 .header {
   align-items: center;
   background-color: #EFEFEF;
@@ -68,10 +75,10 @@ body {
   font-weight: 100;
   margin: 5px 0;
 }
-h1, h2, h3, h4 {
-  margin: 10px 0 15px;
-}
 
+/***********************/
+/*  My Skills section  */
+/***********************/
 .rocking {
   background: #e91e63;
   color: white;
@@ -84,6 +91,9 @@ h1, h2, h3, h4 {
   padding: 30px 25px;
 }
 
+/******************/
+/*  AJAX section  */
+/******************/
 #user {
   text-align: center;
 }
